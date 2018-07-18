@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('1') {
       steps {
-        echo 'hello step 1'
+        svn(poll: true, changelog: true, url: 'https://10.10.20.28/svn/GMAS/MichaelF/trunk/libraries/mmc_app')
       }
     }
   }
